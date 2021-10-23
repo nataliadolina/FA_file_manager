@@ -1,0 +1,7 @@
+mkdir /animals
+mkdir /birds
+mkdir /animals/bears
+cd /animals/bears
+mkdir /white_bear
+cd .
+mkdir /black_bear
