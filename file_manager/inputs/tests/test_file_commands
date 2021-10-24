@@ -1,0 +1,8 @@
+touch bears_info
+cat bears_info
+mkdir /animals
+cp bears_info /animals
+touch pandas_info
+mkdir /animals/pandas
+mv pandas_info /animals/pandas
+rename /animals/pandas/pandas_info /animals/pandas/cute_pandas_info

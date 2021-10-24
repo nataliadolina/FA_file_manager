@@ -1,0 +1,17 @@
+mkdir /animals
+mkdir /birds
+mkdir /animals/bears
+cd /animals/bears
+mkdir /white_bear
+cd .
+mkdir /black_bear
+cd .
+rmdir /birds
+touch bears_info
+cat bears_info
+mkdir /animals
+cp bears_info /animals
+touch pandas_info
+mkdir /animals/pandas
+mv pandas_info /animals/pandas
+rename /animals/pandas/pandas_info /animals/pandas/cute_pandas_info

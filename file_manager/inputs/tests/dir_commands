@@ -5,3 +5,5 @@ cd /animals/bears
 mkdir /white_bear
 cd .
 mkdir /black_bear
+cd .
+rmdir /birds

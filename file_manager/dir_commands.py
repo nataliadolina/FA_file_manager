@@ -1,25 +1,27 @@
 import os
-
-full_path = ""
-
+from file_manager.settings import path
 
 def create_directory(string):
+    string = string[0]
     try:
-        os.mkdir(full_path + string, mode=0o777, dir_fd=None)
+        os.mkdir(path.get_full_path() + string, mode=0o777, dir_fd=None)
     except FileExistsError:
         print("Директория уже существует")
 
 
 def remove_directory(string):
+    string = string[0]
     try:
-        os.rmdir(full_path + string, dir_fd=None)
+        os.rmdir(path.get_full_path() + string, dir_fd=None)
 
     except FileNotFoundError:
         print("Директория не найдена")
 
 
 def change_current_dir(new_full_path):
-    global full_path
+    new_full_path = new_full_path[0]
+    global path
+    full_path = path.get_full_path()
     try:
         if new_full_path == ".":
             last_folder_name_length = len(full_path.split("\\")[-1])
@@ -33,4 +35,4 @@ def change_current_dir(new_full_path):
         print("Директория не найдена")
 
     finally:
-        full_path = os.getcwd()
+        path.set_full_path(os.getcwd())

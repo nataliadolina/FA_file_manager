@@ -1,9 +1,0 @@
-mkdir /name
-rmdir /name
-cd .
-touch textfile
-cat /name
-rm filename
-cp filename filedir
-mv file filedir
-mv file newfile #переименование файлов
